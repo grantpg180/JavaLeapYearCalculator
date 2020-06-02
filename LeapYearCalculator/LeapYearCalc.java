@@ -8,12 +8,23 @@ public class LeapYearCalc {
         }else {
             return false;
         }
-}
-    public void calculateLeapYearsBelow1000(int year) {
-        if (year % 4 == 0){
-            System.out.println("is a leap year");  
-        }else if (year % 4 != 0){
-            System.out.println("is NOT a leap year");
-        }
     }
+    public boolean calculateLeapYearsBelow1000(int year) {
+        if (year > 0 && year < 1000 && year % 4 == 0){
+           return true;  
+        }else if (year > 0 && year < 1000 && year % 4 != 0){
+            return true;
+        }
+        return false;
+    }
+    public boolean calculateYearsOver999(int year) {
+        if (year > 999 && year < 10000 && year % 400 ==0 && year % 100 ==0){
+            return true;
+        }else if (year > 999 && year < 10000 && year % 400 !=0 && year % 100 !=0){
+            return true;
+        }else if (year > 999 && year < 10000 && year % 400 !=0 && year % 100 ==0){
+            return true;
+        }
+        return false;
+}
 }

@@ -16,10 +16,17 @@ public class LeapYearCalcTest {
     }
     @Test
     public void calculateLeapYearsBelow1000(){
-        LeapYearCalc year = new LeapYearCalc();
-        assertEquals("400", year.calculateLeapYearsBelow1000(400));
-        assertEquals("322", year.calculateLeapYearsBelow1000(322));
+    LeapYearCalc year = new LeapYearCalc();
+        assertTrue("400", year.calculateLeapYearsBelow1000(400));
+        assertTrue("322", year.calculateLeapYearsBelow1000(322));
 
+
+    }
+    @Test
+    public final void calculateYearsOver999(){
+    LeapYearCalc year = new LeapYearCalc();
+        assertTrue("2001", year.calculateYearsOver999(2001));
+        assertTrue("2000", year.calculateYearsOver999(2000));
 
     }
 
